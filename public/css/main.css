@@ -1,6 +1,43 @@
 .top-bar {
+    position: relative;
     width: 100%;
+    background-color: lightgray;
 }
+.to-left {
+    display: inline-block;
+    position: absolute;
+    right:10px;
+}
+.to-left > a::before {
+    content:"[";    
+}
+.to-left > a::after {
+    content: "]";
+}
+/* Create two equal columns that sits next to each other for adminpage*/
+/* https://codepen.io/Eole/pen/baZoNP */
+.content2 {
+    display: flex;
+    flex: 1;
+    background: #999;
+    color: #000; 
+}
+.admin-row {
+    display: flex;
+    flex:1;
+  }
+  
+.admin-column1 {
+    width: 20%;
+    background: #ccc;
+    order: 1;
+}
+.admin-column2 {
+    flex: 1;
+    order: 2;
+    background: #eee;
+}
+
 .container {
     width:100%;
 }

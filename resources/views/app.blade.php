@@ -9,9 +9,8 @@
         @include('topline')     
         </div>
         <div class="container">
-            @section('content')
-            This is for content
-            @show
+            @yield('content')
+                        
         </div>
     </body>
 </html>

@@ -18,3 +18,5 @@ $router->get('/', function () use ($router) {
 });
 */
 $router->get('/', 'MainPageController@show');
+$router->get('/admin', 'AdminPageController@show');
+$router->get('/admin/common', 'AdminPageController@show');

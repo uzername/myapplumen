@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-class MainPageController extends Controller
+class AdminPageController extends Controller
 {
     /**
      * Create a new controller instance for displaying main page
@@ -14,7 +14,7 @@ class MainPageController extends Controller
         
     }
     public function show() {
-        return view('app',['adminref'=>'/admin']);
+        return view('admin',['adminref'=>'/']);
     }
     //
 }

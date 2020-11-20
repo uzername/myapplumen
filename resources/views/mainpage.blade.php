@@ -1,5 +1,8 @@
 @extends('app')
 
-@section 
-
-@yield('content')
+@section('content')
+<div>
+<div> {{ $sitetitle }} </div> 
+<div> {{ $descrtext }} </div> 
+</div>
+@endsection

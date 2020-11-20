@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Validation\ValidationException;
 use Laravel\Lumen\Exceptions\Handler as ExceptionHandler;
 use Symfony\Component\HttpKernel\Exception\HttpException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -49,6 +50,11 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Throwable $exception)
     {
+        // https://laracasts.com/discuss/channels/laravel/l54-how-to-handle-notfoundhttpexception?page=0
+        if ($exception instanceof NotFoundHttpException){
+            return response('Resource not found', 404);
+        }
+
         return parent::render($request, $exception);
     }
 }
